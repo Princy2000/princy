@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tent Night Stay Booking</title>
+
+<meta name="description"
+content="Tent Night Stay Booking - Check-In 7:00 PM, Check-Out 9:30 AM">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f4f4;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#1b4332;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
+
+nav h2{
+color:#fff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:#fff;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url('https://images.unsplash.com/photo-1504280390368-361c6d9f38f4?auto=format&fit=crop&w=1600&q=80')
+center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero-content{
+background:rgba(0,0,0,.4);
+padding:40px;
+border-radius:15px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#2d6a4f;
+color:white;
+text-decoration:none;
+border-radius:8px;
+margin:10px;
+}
+
+.btn:hover{
+background:#1b4332;
+}
+
+/* SECTION */
+
+section{
+padding:80px 20px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery-grid img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* FACILITIES */
+
+.facilities{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.facility{
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+/* PACKAGES */
+
+.packages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.price{
+font-size:28px;
+color:#2d6a4f;
+font-weight:bold;
+}
+
+/* BOOKING */
+
+.booking-box{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 3px 15px rgba(0,0,0,.1);
+}
+
+.form-group{
+margin-bottom:15px;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#2d6a4f;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1b4332;
+}
+
+/* REVIEW */
+
+.review{
+background:white;
+padding:20px;
+margin-bottom:15px;
+border-radius:10px;
+}
+
+/* FAQ */
+
+details{
+background:white;
+padding:15px;
+margin-bottom:10px;
+border-radius:10px;
+}
+
+/* CONTACT */
+
+.contact{
+background:white;
+padding:20px;
+border-radius:10px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+color:white;
+z-index:999;
+}
+
+/* FOOTER */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:35px;
+}
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>🏕 Tent Stay</h2>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#booking">Booking</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Tent Night Stay Booking</h1>
+
+<p>
+Check-In 7:00 PM<br>
+Check-Out 9:30 AM
+</p>
+
+<a href="#booking" class="btn">Book Now</a>
+<a href="#booking" class="btn">Check Availability</a>
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+<h2>Gallery</h2><br>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1504280390368-361c6d9f38f4?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80">
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Facilities</h2><br>
+
+<div class="facilities">
+
+<div class="facility">🏕 Tent Accommodation</div>
+<div class="facility">🔥 Campfire</div>
+<div class="facility">🚗 Parking</div>
+<div class="facility">🚻 Washroom</div>
+<div class="facility">📶 Free WiFi</div>
+<div class="facility">🌲 Nature View</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Packages</h2><br>
+
+<div class="packages">
+
+<div class="card">
+<h3>Standard Tent</h3>
+<div class="price">₹499</div>
+</div>
+
+<div class="card">
+<h3>Couple Tent</h3>
+<div class="price">₹1299</div>
+</div>
+
+<div class="card">
+<h3>Family Tent</h3>
+<div class="price">₹2499</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="booking">
+<div class="container">
+
+<div class="booking-box">
+
+<h2>Book Your Tent</h2><br>
+
+<form>
+
+<div class="form-group">
+<input type="text" placeholder="Guest Name">
+</div>
+
+<div class="form-group">
+<input type="tel" placeholder="Mobile Number">
+</div>
+
+<div class="form-group">
+<input type="email" placeholder="Email">
+</div>
+
+<div class="form-group">
+<input type="date">
+</div>
+
+<div class="form-group">
+<select>
+<option>Select Tent</option>
+<option>Standard Tent</option>
+<option>Couple Tent</option>
+<option>Family Tent</option>
+</select>
+</div>
+
+<div class="form-group">
+<textarea rows="4"
+placeholder="Special Request"></textarea>
+</div>
+
+<button type="submit">
+Book Now
+</button>
+
+</form>
+
+</div>
+
+</div>
+</section>
+
+<section id="location">
+<div class="container">
+
+<h2>Location</h2><br>
+
+<iframe
+src="https://www.google.com/maps?q=12.9716,77.5946&z=15&output=embed"
+width="100%"
+height="400"
+style="border:0;">
+</iframe>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Reviews</h2><br>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Amazing night stay experience.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Peaceful atmosphere and great tents.
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>FAQ</h2><br>
+
+<details>
+<summary>Check-In Time?</summary>
+<p>7:00 PM</p>
+</details>
+
+<details>
+<summary>Check-Out Time?</summary>
+<p>9:30 AM</p>
+</details>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+
+<div class="contact">
+<h2>Contact Us</h2>
+
+<p>📞 +91 8667438194</p>
+<p>📧 booking@example.com</p>
+<p>📍 Your Camp Location</p>
+</div>
+
+</div>
+</section>
+
+<a href="https://wa.me/918667438194"
+target="_blank"
+class="whatsapp">
+💬
+</a>
+
+<footer>
+© 2026 Tent Night Stay Booking
+</footer>
+
+</body>
+</html>
